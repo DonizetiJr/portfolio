@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Donizeti Jr</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="show-wrapper-home">
+    <div id="o-wrapper" class="o-wrapper">
+
+      <header>
+        <div class="o-header">
+          <h1 id="main_title">Donizeti Jr</h1>
+          <h4 id="subtitle">Estudante   //   Programador   //   Geek</h4>
+       </div>
+      </header>
+
+    </div>
+
+    <div class="wrapper wrapper_padding clearfix">
+      <div class="col-1 about homepage_content">
+        <h2>Sobre</h2>
+        <hr>
+        <p>Literally keffiyeh retro, cold-pressed single-origin coffee viral</p>
+        <p>Pop-up 3 wolf moon seitan. Pitchfork normcore fanny pack iPhone,
+        umami dreamcatcher 3 <a href="#">Wolf moon</a> crucifix salvia.</p>
+        <p> Taxidermy asymmetrical prism, polaroid craft beer. </p>
+      </div>
+
+      <div class="col-2 homepage_content">
+        <h2>Últimos textos</a></h2>
+        <hr>
+        <% @posts.each do |post| %>
+          <h3><a href="#"><%= link_to post.title, post %></a></h3>
+          <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+        <% end %>
+      </div>
+
+      <div class="col-3 homepage_content">
+        <h2>Últimos Projetos</a></h2>
+        <hr>
+        <h3><a href="#">Meu primeiro site</a></h3>
+        <p class="date">Sexta 10 de Abril</p>
+        <h3><a href="#">Guia Rails</a></h3>
+        <p class="date">Quarta 9 de Junho</p>
+        <h3><a href="#">Estrutura de dados</a></h3>
+        <p class="date">Sábado 15 de Maio</p>
+      </div>
+    </div>
+    <footer id="main_footer" class="main_footer">
+      <div class="footer_links">
+        <a class="facebook-icon"href="https://facebook.com"target="_blank">Facebook</a>
+        <a class="twitter-icon" href="http://twitter.com" target="_blank">Twitter</a>
+        <a clas="gplus-icon" href="http://google.com" target="_blank">GPlus</a>
+        <a class="github-icon" href="http://github.com" target="_blank">Github</a>
+      </div>
+      <br>
+
+      <p class="copyright">&copy;Donizeti Junior. All rights reserved. 2016</p>
+    </footer>
+
+
+    <a href="#top" id="bottom"></a>
+  </div>
+
+
+
+</body>
+</html>
