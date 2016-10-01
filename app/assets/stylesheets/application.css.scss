@@ -1,0 +1,160 @@
+@import 'normalize';
+
+$background: #fcfaf7;
+$dark: rgb(0,0,0);
+$light: #b2b7bd;
+$highlight: #fc5158;
+$border: #e4e7ec;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+
+  opacity: 1;
+  transition: 3s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+  overflow-y: scroll;
+}
+
+/* - - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - */
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.skinny_wrapper {
+  width: 50%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.wrapper_padding {
+  padding: 7rem 2rem;
+}
+
+.o-wrapper {
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.show-wrapper-home {
+
+  background-size: cover;
+  margin: 1.5em;
+  background-color: rgb(12,12,12);
+}
+
+/* - - - - - - - - - - - - - - Container - - - - - - - - - - - */
+
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px;
+  .see_more {
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    bottom: 30px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    &:hover {
+      color: black;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media all and (min-width: 480px) {
+  .o-container {
+    padding: 0 24px;
+  }
+}
+@media all and (min-width: 720px) {
+  .o-container {
+    padding: 0 48px;
+  }
+}
+
+/* - - - -  - - - - - - - - - - First Header - - -  - - - -  - - - */
+
+.o-header {
+  background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+              url(https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=456716294dcad188cee6570aa12d2b65);
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_title, #subtitle {
+  color: $background;
+  font-family: 'Raleway', sans-serif;
+}
+
+#main_title {
+  border: 1px solid;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 4px;
+	padding: .1em 1.2em;
+}
+
+#subtitle {
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+@media all and (min-width: 480px) {
+  .o-header__title {
+    margin: 36px;
+    font-size: 42px;
+  }
+}
+
+#page_title {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#top {
+  font-size: 10px;
+}
+
+@import 'styles';
+@import 'hidden-menu';
+@import 'post_projects';
+@import 'contact';
+@import 'footer.css';

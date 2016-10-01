@@ -1,0 +1,128 @@
+$background: #fcfaf7;
+$dark: rgb(12,12,12);
+$light: #b2b7bd;
+$highlight: #fc5158;
+$border: #e4e7ec;
+
+.article-header {
+ background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+               url(https://hd.unsplash.com/photo-1466188635785-8b5f35009981);
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#posts_wrapper {
+  padding: 3em 0;
+  .post {
+    text-align: center;
+    .date {
+      font-size: .9em;
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+        color: $dark;
+        &:hover {
+          color: $highlight;
+        }
+      }
+    }
+    hr {
+      margin: 3em auto;
+    }
+  }
+}
+
+// - - - - - - - - - - - - Posts Show - - - - - - - - - - - - -  //
+
+  #post_show_content {
+    header {
+      text-align: center;
+      .date {
+        font-size: .9em;
+        color: $light;
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+    }
+    hr {
+      margin: 2em auto;
+    }
+  }
+
+#share_box {
+  text-align: center;
+  p {
+    padding: 0 0 1em 0;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark;
+    font-size: .8em;
+  }
+  i {
+    color: $dark;
+    padding: 1em 1.5em;
+    &:hover {
+      color: $highlight;
+      cursor: pointer;
+    }
+  }
+}
+
+// - - - - - - - - - - - - Pagination - - - - - - - - - - - - - //
+
+.pagination:before,
+.pagination:after {
+  content: " ";
+  display: table;
+}
+
+.pagination:after {
+  clear: both;
+}
+
+.pagination {
+  text-align: center;
+  margin: 0 0 3em 0;
+  a, .previous_page, .current, .next_page {
+    padding: .7em 1em;
+    margin: 0 .5em;
+    border: 1px solid $dark;
+    border-radius: .15em;
+    line-height: 20px;
+    text-decoration: none;
+    font-size: .7em;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      font-size: .8em;
+      background: $highlight;
+      border: $highlight;
+      color: #fff;
+    }
+  }
+  .current{
+    border: none;
+    background: $highlight;
+    color: #fff;
+  }
+  .disabled {
+    border: none;
+    color: #C0C0C0;
+    &:hover {
+      color: #C0C0C0;
+    }
+  }
+}
