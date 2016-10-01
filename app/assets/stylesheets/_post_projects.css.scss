@@ -81,6 +81,12 @@ $border: #e4e7ec;
   }
 }
 
+#content {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: $dark;
+}
+
 // - - - - - - - - - - - - Pagination - - - - - - - - - - - - - //
 
 .pagination:before,
