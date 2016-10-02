@@ -32,14 +32,14 @@
       <div class="col-3 homepage_content">
         <h2>Últimos Projetos</a></h2>
         <hr>
-        <h3><a href="#">Meu primeiro site</a></h3>
-        <p class="date">Sexta 10 de Abril</p>
-        <h3><a href="#">Guia Rails</a></h3>
-        <p class="date">Quarta 9 de Junho</p>
-        <h3><a href="#">Estrutura de dados</a></h3>
-        <p class="date">Sábado 15 de Maio</p>
+        <% @projects.each do |project| %>
+          <h3><a href="#"><%= link_to project.title, project %></a></h3>
+          <p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
+        <% end %>
       </div>
+
     </div>
+
     <footer id="main_footer" class="main_footer">
       <div class="footer_links">
         <a class="facebook-icon"href="https://facebook.com"target="_blank">Facebook</a>
@@ -48,7 +48,6 @@
         <a class="github-icon" href="http://github.com" target="_blank">Github</a>
       </div>
       <br>
-
       <p class="copyright">&copy;Donizeti Junior. All rights reserved. 2016</p>
     </footer>
 

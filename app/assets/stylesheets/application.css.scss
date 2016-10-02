@@ -153,6 +153,18 @@ body.fade-out {
   font-size: 10px;
 }
 
+.project_button {
+  background: $highlight;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.button_wrapper {
+  margin: 4em 0 0 0;
+  text-align: center;
+}
+
 @import 'styles';
 @import 'hidden-menu';
 @import 'post_projects';
