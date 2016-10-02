@@ -21,6 +21,9 @@ gem 'friendly_id', '~> 5.1'
 gem 'mail_form'
 gem 'actionmailer'
 
+# Devise gem for authentication
+gem 'devise'
+
 # Pagination
 gem 'will_paginate', '~> 3.1', '>= 3.1.3'
 

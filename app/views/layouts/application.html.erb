@@ -13,10 +13,16 @@
 
   <body>
 
-    <main class="o-container">
+    <header class="o-container">
       <span id="c-button--push-right" class="c-button">&#9776;</span>
       <a href="#bottom" id="top"<img src="/images/arrows_down.png")></a>
-    </main>
+    </header>
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 
