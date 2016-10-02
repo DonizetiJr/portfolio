@@ -34,12 +34,7 @@
         </div>
       <% end %>
 
-      <div class="pagination">
-        <span class="previous_page disabled">Anterior</span>
-        <em class="current">1</em>
-        <a href="#">2</a>
-        <a href="#" class="next_page">Próximo</a>
-      </div>
+      <%= will_paginate @posts %>
 
     <footer id="main_footer">
       <div class="footer_links">
