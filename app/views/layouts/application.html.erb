@@ -32,7 +32,10 @@
         <li class="c-menu__item"><a href="<%= root_path %>" class="c-menu__link current"> Home</a></li>
         <li class="c-menu__item"><a href="<%= posts_path %>" class="c-menu__link">Meus artigos</a></li>
         <li class="c-menu__item"><a href="<%= projects_path %>" class="c-menu__link">Meus projetos</a></li>
-        <li class="c-menu__item"><a href="contact.html" class="c-menu__link">Contato</a></li>
+        <li class="c-menu__item"><a href="<%= new_contact_path %>" class="c-menu__link">Contato</a></li>
+        <% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% end %>
       </ul>
 
       <nav class="social-icons">

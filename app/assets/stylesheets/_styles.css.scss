@@ -59,6 +59,12 @@ a {
   display: none;
 }
 
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid $border;
+}
+
 hr {
   width: 3.5em;
   display: block;
