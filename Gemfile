@@ -18,6 +18,9 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 # slugging and permalinks plugins for Active Record
 gem 'friendly_id', '~> 5.1'
 
+gem 'mail_form'
+gem 'actionmailer'
+
 # Pagination
 gem 'will_paginate', '~> 3.1', '>= 3.1.3'
 

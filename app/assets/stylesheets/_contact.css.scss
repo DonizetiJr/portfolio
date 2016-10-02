@@ -9,23 +9,26 @@ $border: #e4e7ec;
   background-size: cover;
   margin: 1.5em;
   height: 97vh;
+  text-align: center;
   background-color: rgb(12,12,12);
    -webkit-background-size: cover;
    background-size: cover;
    display: flex;
    flex-direction: column;
+   h1, p {
+     color: $background;
+   }
 }
 
 label {
   font-weight: 700;
   font-size: 1.3em;
-  color: #fff;
+  color: $background;
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
-  border: 1px solid $dark;
-  border-radius: 10px;
-  background: transparent;
+  border: 1px solid $light;
+  background: rgba(white, 0.4);
   font-size: 1.3em;
   width: 100%;
   max-width: 100%;
