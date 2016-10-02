@@ -12,8 +12,10 @@
 
     <main class="o-container">
       <span id="c-button--push-right" class="c-button">&#9776;</span>
-      <a href="#bottom" id="top"><img src="images/arrow.png" alt="See More" class="see_more"></a>
+      <a href="#bottom" id="top"<img src="/images/arrows_down.png")></a>
     </main>
+
+    <%= yield %>
 
     <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
       <a href="javascript:void(0)" class="c-menu__close">&times;</a>
@@ -32,8 +34,6 @@
     </nav>
 
     <div id="c-mask" class="c-mask"></div>
-
-    <%= yield %>
 
   </body>
 </html>
