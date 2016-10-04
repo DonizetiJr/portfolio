@@ -26,26 +26,28 @@
 
     <%= yield %>
 
-    <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
-      <a href="javascript:void(0)" class="c-menu__close">&times;</a>
-      <ul class="c-menu__items">
-        <li class="c-menu__item"><a href="<%= root_path %>" class="c-menu__link current"> Home</a></li>
-        <li class="c-menu__item"><a href="<%= posts_path %>" class="c-menu__link">Meus artigos</a></li>
-        <li class="c-menu__item"><a href="<%= projects_path %>" class="c-menu__link">Meus projetos</a></li>
-        <li class="c-menu__item"><a href="<%= new_contact_path %>" class="c-menu__link">Contato</a></li>
-        <% if user_signed_in? %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <% end %>
-      </ul>
+    <!--    Hidden Menu     -->
 
-      <nav class="social-icons">
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </nav>
-    </nav>
+   <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
+     <a href="javascript:void(0)" class="c-menu__close">&times;</a>
+     <ul class="c-menu__items">
+       <li class="c-menu__item"><a href="<%= root_path %>" class="c-menu__link current"> Home</a></li>
+       <li class="c-menu__item"><a href="<%= posts_path %>" class="c-menu__link">Meus artigos</a></li>
+       <li class="c-menu__item"><a href="<%= projects_path %>" class="c-menu__link">Meus projetos</a></li>
+       <li class="c-menu__item"><a href="<%= new_contact_path %>" class="c-menu__link">Contato</a></li>
+       <% if user_signed_in? %>
+         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+       <% end %>
+     </ul>
 
-    <div id="c-mask" class="c-mask"></div>
+     <nav class="social-icons">
+       <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+       <a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+       <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+     </nav>
+   </nav>
+
+   <div id="c-mask" class="c-mask"></div>
 
   </body>
 </html>
