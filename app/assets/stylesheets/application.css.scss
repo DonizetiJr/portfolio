@@ -1,4 +1,8 @@
 @import 'normalize';
+@import "material";
+/*
+*= require material_icons
+*/
 
 $background: #fcfaf7;
 $dark: rgb(0,0,0);
@@ -23,7 +27,6 @@ body {
 
 body {
   margin: 0;
-  background-color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.8;
@@ -60,13 +63,6 @@ body.fade-out {
           transition: transform 0.3s;
 }
 
-.show-wrapper-home {
-
-  background-size: cover;
-  margin: 1.2em;
-  background-color: rgb(12,12,12);
-}
-
 /* - - - - - - - - - - - - - - Container - - - - - - - - - - - */
 
 .o-container {
@@ -98,6 +94,50 @@ body.fade-out {
 @media all and (min-width: 720px) {
   .o-container {
     padding: 0 48px;
+  }
+}
+
+/* - - - - -  - - - - - - - - - Material Design - -  - - -  - - -  */
+
+.mdl-layout__drawer-button {
+  margin: .4em 0 0 1.8em;
+}
+
+.mdl-layout__drawer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0, 0.3)),
+              url(https://images.unsplash.com/photo-1472865746841-45afd782314f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=3133dfb7ee01616f5d69cd0ed969b2f4);
+  background-size: cover;
+  border: none;
+  align-items: center;
+  width: 35%;
+  transform: translateX(-700px);
+  .mdl-navigation {
+    text-align: center;
+    .mdl-navigation__link {
+      font-size: 2.5em;
+      margin: .6em;
+      color: #fff;
+      &:hover {
+        border: none;
+        background-color: transparent;
+        color: $highlight;
+      }
+    }
+    .first_link {
+      margin-top: 5em;
+    }
+  }
+  .social-icons {
+    margin-left: 5em;
+    i {
+      color: $background;
+      font-size: 25px;
+      padding-top: 8em;
+      letter-spacing: 2.5em;
+      &:hover {
+        color: $highlight;
+      }
+    }
   }
 }
 
@@ -166,7 +206,6 @@ body.fade-out {
 }
 
 @import 'styles';
-@import 'hidden-menu';
 @import 'post_projects';
 @import 'pygments';
 @import 'contact';

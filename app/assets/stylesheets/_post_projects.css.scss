@@ -5,15 +5,33 @@ $highlight: #fc5158;
 $border: #e4e7ec;
 
 .article-header {
- background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
-               url(https://hd.unsplash.com/photo-1466188635785-8b5f35009981);
-  height: 100vh;
+  background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+                url(https://images.unsplash.com/photo-1448301858776-07f780e9c9da?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb);
+}
+
+.project-header {
+  background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+                url(https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1125&q=80&cs=tinysrgb);
+}
+
+.article-header, .project-header {
+
+  height: 65vh;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
+  font-size: .8em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media all and (min-width: 200px) {
+  .article-header, .project-header {
+    .page_title {
+      font-size: 5em;
+    }
+  }
 }
 
 #posts_wrapper {
@@ -61,6 +79,7 @@ $border: #e4e7ec;
 // - - - - - - - - - - - - Posts Show - - - - - - - - - - - - -  //
 
   #post_show_content {
+    font-family: 'Raleway', sans-serif;
     header {
       text-align: center;
       .date {

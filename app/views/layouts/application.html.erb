@@ -4,7 +4,8 @@
     <title>Portfolio</title>
     <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,10 +14,50 @@
 
   <body>
 
-    <header class="o-container">
-      <span id="c-button--push-right" class="c-button">&#9776;</span>
-      <a href="#bottom" id="top"<img src="/images/arrows_down.png")></a>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+  <style>
+    .demo-layout-transparent {
+      background: url('../assets/demos/transparent.jpg') center / cover;
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+  </style>
+
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <%= link_to "Home", root_path, class: "mdl-navigation__link" %>
+          <%= link_to "Artigos", posts_path, class: "mdl-navigation__link" %>
+          <%= link_to "Projetos", projects_path, class: "mdl-navigation__link" %>
+          <%= link_to "Contato", new_contact_path, class: "mdl-navigation__link" %>
+        </nav>
+      </div>
     </header>
+    <div class="mdl-layout__drawer">
+      <nav class="mdl-navigation">
+        <%= link_to "Home", root_path, class: "mdl-navigation__link first_link" %>
+        <%= link_to "Meus artigos", posts_path, class: "mdl-navigation__link" %>
+        <%= link_to "Meus projetos", projects_path, class: "mdl-navigation__link" %>
+        <%= link_to "Contato", new_contact_path, class: "mdl-navigation__link" %>
+      </nav>
+      <nav class="social-icons">
+        <a href="http://twitter.com/DCSJunior" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://facebook.com/donizeti.junior.92" target="_blank"><i class="fa fa-facebook"></i></a>
+<a href="http://github.com/DonizetiJr" target="_blank"><i class="fa fa-github"></i></a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+    </main>
+  </div>
+
 
     <% if notice %>
       <p class="notice"><%= notice %></p>
@@ -25,29 +66,6 @@
     <% end %>
 
     <%= yield %>
-
-    <!--    Hidden Menu     -->
-
-   <nav id="c-menu--push-right" class="c-menu c-menu--push-right">
-     <a href="javascript:void(0)" class="c-menu__close">&times;</a>
-     <ul class="c-menu__items">
-       <li class="c-menu__item"><a href="<%= root_path %>" class="c-menu__link current"> Home</a></li>
-       <li class="c-menu__item"><a href="<%= posts_path %>" class="c-menu__link">Meus artigos</a></li>
-       <li class="c-menu__item"><a href="<%= projects_path %>" class="c-menu__link">Meus projetos</a></li>
-       <li class="c-menu__item"><a href="<%= new_contact_path %>" class="c-menu__link">Contato</a></li>
-       <% if user_signed_in? %>
-         <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-       <% end %>
-     </ul>
-
-     <nav class="social-icons">
-       <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-       <a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-       <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-     </nav>
-   </nav>
-
-   <div id="c-mask" class="c-mask"></div>
 
   </body>
 </html>

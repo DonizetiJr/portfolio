@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery-3.1.1.min
 //= require turbolinks
+//= require material
 //= require_tree .

@@ -10,43 +10,36 @@
   </script>
 
   <div class="show-wrapper">
+    <div id="o-wrapper" class="o-wrapper">
 
-    <header class="clearfix">
-      <span id="c-button--push-right" class="c-button white-background">&#9776;</span>
-    </header>
-
-  <div id="o-wrapper" class="o-wrapper">
-
-    <header>
       <div class="article-header">
         <h1 class="page_title">“The more that you read, the more things you
           will know.” </h1>
-     </div>
-    </header>
-
-    <h1 class="page-category">Meus artigos</h1>
-    <div id="posts_wrapper" class="skinny_wrapper">
-      <% @posts.each do |post| %>
-        <div class="post">
-          <p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
-          <h2><a href="article_show.html"><%= link_to post.title, post %></a></h2>
-          <hr>
-        </div>
-      <% end %>
-
-      <%= will_paginate @posts %>
-
-    <footer id="main_footer">
-      <div class="footer_links">
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">GPlus</a>
-        <a href="#">Github</a>
       </div>
-      <br>
 
-      <p class="copyright-articles">&copy;Donizeti Junior. All rights reserved. 2016</p>
-    </footer>
+      <h1 class="page-category">Meus artigos</h1>
+      <div id="posts_wrapper" class="skinny_wrapper">
+        <% @posts.each do |post| %>
+          <div class="post">
+            <p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
+            <h2><a href="article_show.html"><%= link_to post.title, post %></a></h2>
+            <hr>
+          </div>
+        <% end %>
+
+        <%= will_paginate @posts %>
+
+      <footer id="main_footer">
+        <div class="footer_links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">GPlus</a>
+          <a href="#">Github</a>
+        </div>
+        <br>
+
+        <p class="copyright-articles">&copy;Donizeti Junior. All rights reserved. 2016</p>
+      </footer>
+    </div>
   </div>
-</div>
 </div>
