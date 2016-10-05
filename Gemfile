@@ -12,10 +12,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-# Material Design lite
-gem 'material_design_lite-rails', '~> 1.2'
-gem 'material_icons'
-
 # Markdown & syntax highliting
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'

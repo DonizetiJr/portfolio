@@ -1,5 +1,19 @@
 <div id="o-wrapper" class="o-wrapper">
+
+
   <div class="show-wrapper-contact">
+
+        <header id="main_navigation">
+            <nav>
+              <%= link_to "Home", root_path, class: "navigation__link" %>
+              <%= link_to "Artigos", posts_path, class: "navigation__link" %>
+              <%= link_to "Projetos", projects_path, class: "navigation__link" %>
+              <%= link_to "Contato", new_contact_path, class: "navigation__link" %>
+              <% if user_signed_in? %>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out" %>
+             <% end %>
+            </nav>
+        </header>
 
     <div class="skinny_wrapper wrapper_padding">
       <%= form_for @contact do |f| %>
@@ -26,5 +40,4 @@
       <% end %>
 
     </div>
-  </div>
 </div>

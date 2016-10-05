@@ -2,17 +2,23 @@
 
   <div class="show-wrapper-home">
 
-  <script>document.body.className += ' fade-out';</script>
-  <script>
-    $(function() {
-      $('body').removeClass('fade-out');
-    });
-  </script>
-
   <div class="show-wrapper">
     <div id="o-wrapper" class="o-wrapper">
 
       <div class="article-header">
+
+        <div id="main_navigation">
+            <nav>
+              <%= link_to "Home", root_path, class: "navigation__link" %>
+              <%= link_to "Artigos", posts_path, class: "navigation__link" %>
+              <%= link_to "Projetos", projects_path, class: "navigation__link" %>
+              <%= link_to "Contato", new_contact_path, class: "navigation__link" %>
+              <% if user_signed_in? %>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out" %>
+             <% end %>
+            </nav>
+        </div>
+
         <h1 class="page_title">“The more that you read, the more things you
           will know.” </h1>
       </div>

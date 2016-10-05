@@ -1,8 +1,4 @@
 @import 'normalize';
-@import "material";
-/*
-*= require material_icons
-*/
 
 $background: #fcfaf7;
 $dark: rgb(0,0,0);
@@ -38,7 +34,6 @@ body {
 body.fade-out {
   opacity: 0;
   transition: none;
-  overflow-y: scroll;
 }
 
 /* - - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - */
@@ -99,8 +94,23 @@ body.fade-out {
 
 /* - - - - -  - - - - - - - - - Material Design - -  - - -  - - -  */
 
-.mdl-layout__drawer-button {
-  margin: .4em 0 0 1.8em;
+#main_navigation {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: .5px;
+  padding: 1em 5%;
+  nav {
+    float: right;
+    padding-top: 1.5rem;
+    .navigation__link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+    #sign-out {
+      color: pink;
+    }
+  }
 }
 
 .mdl-layout__drawer {
@@ -147,6 +157,8 @@ body.fade-out {
   background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
               url(https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=456716294dcad188cee6570aa12d2b65);
   height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
@@ -157,23 +169,20 @@ body.fade-out {
 
 #main_title, #subtitle {
   color: $background;
-  font-family: 'Raleway', sans-serif;
 }
 
 #main_title {
-  border: 1px solid;
-  font-size: 3em;
-  text-transform: uppercase;
+  border: .8px solid;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 4px;
 	padding: .1em 1.2em;
 }
 
 #subtitle {
-  letter-spacing: 7px;
-  text-transform: uppercase;
+  letter-spacing: 6px;
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 @media all and (min-width: 480px) {

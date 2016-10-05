@@ -2,12 +2,25 @@
     <div id="o-wrapper" class="o-wrapper">
 
       <header>
+
         <div class="o-header">
+
+          <div id="main_navigation">
+              <nav>
+                <%= link_to "Home", root_path, class: "navigation__link" %>
+                <%= link_to "Artigos", posts_path, class: "navigation__link" %>
+                <%= link_to "Projetos", projects_path, class: "navigation__link" %>
+                <%= link_to "Contato", new_contact_path, class: "navigation__link" %>
+                <% if user_signed_in? %>
+                  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out" %>
+               <% end %>
+              </nav>
+          </div>
+
           <h1 id="main_title">Donizeti Jr</h1>
           <h4 id="subtitle">Estudante   //   Programador   //   Geek</h4>
        </div>
       </header>
-
 
     </div>
 
