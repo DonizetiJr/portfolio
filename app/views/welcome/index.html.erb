@@ -1,21 +1,61 @@
 <div class="show-wrapper-home">
     <div id="o-wrapper" class="o-wrapper">
-
+<button class="menu-open menu-open--htx">
+  <span>toggle menu</span>
+</button>
       <header>
 
         <div class="o-header">
-
           <div id="main_navigation">
-              <nav>
+
+              <nav class="navbar">
+
+                <div class="menu-close">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
                 <%= link_to "Home", root_path, class: "navigation__link" %>
-                <%= link_to "Artigos", posts_path, class: "navigation__link" %>
-                <%= link_to "Projetos", projects_path, class: "navigation__link" %>
+                <br>
+                <%= link_to "Meus artigos", posts_path, class: "navigation__link" %>
+                <br>
+                <%= link_to "Meus projetos", projects_path, class: "navigation__link" %>
+                <br>
                 <%= link_to "Contato", new_contact_path, class: "navigation__link" %>
                 <% if user_signed_in? %>
                   <%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out" %>
                <% end %>
               </nav>
           </div>
+
+          <script>
+
+          (function() {
+
+              "use strict";
+
+              var toggle = document.querySelector(".menu-open");
+              toggleHandler(toggle);
+
+              function toggleHandler(toggle) {
+                toggle.addEventListener( "click", function(e) {
+                  e.preventDefault();
+                  (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                });
+              }
+
+            })();
+
+            document.querySelector('.menu-open').onclick = function() {
+              if (document.documentElement.classList.contains('menu-ativo')) {
+                document.documentElement.classList.remove('menu-ativo');
+              } else {
+                document.documentElement.classList.add('menu-ativo');
+              }
+            };
+
+          </script>
 
           <h1 id="main_title">Donizeti Jr</h1>
           <h4 id="subtitle">Estudante   //   Programador   //   Geek</h4>

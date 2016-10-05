@@ -15,22 +15,20 @@ $border: #e4e7ec;
 }
 
 .article-header, .project-header {
-
-  height: 65vh;
+  width: 100%;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
-  font-size: .8em;
+  font-size: 0.4em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-@media all and (min-width: 200px) {
+@media screen and (max-width: 250px) {
   .article-header, .project-header {
-    .page_title {
-      font-size: 5em;
-    }
+      font-size: 1em;
+      color: $highlight;
   }
 }
 

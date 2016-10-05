@@ -1,0 +1,91 @@
+$button-width: 35px;                    // The width of the button area
+$button-height: 66px;                   // The height of the button area
+$bar-thickness: 2px;                    // The thickness of the button bars
+$button-pad: 5px;                      // The left/right padding between button area and bars.
+$button-bar-space: 5px;                // The spacing between button bars
+$button-transition-duration: 0.2s;     // The transition duration
+
+.menu-open {
+  z-index: 999999;
+  background-color: transparent;
+  overflow: hidden;
+  width: $button-width;
+  height: $button-height;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+  transition: background $button-transition-duration;
+}
+
+.menu-open:focus {
+  outline: none;
+}
+
+.menu-open span {
+  display: block;
+  position: absolute;
+  top: ($button-height / 2) - ($bar-thickness / 2);
+  left: $button-pad;
+  right: $button-pad;
+  height: $bar-thickness;
+  background: rgb(255,255,255);
+}
+
+.menu-open span::before,
+.menu-open span::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: $bar-thickness;
+  background-color: #fff;
+  content: "";
+}
+
+.menu-open span::before {
+  top: -$bar-thickness - $button-bar-space;
+}
+
+.menu-open span::after {
+  bottom: -$bar-thickness - $button-bar-space;
+}
+
+.menu-open--htx span {
+  transition: background 0s 0.2s;
+}
+
+.menu-open--htx span::before,
+.menu-open--htx span::after {
+  transition-duration: 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+
+.menu-open--htx span::before {
+  transition-property: top, transform;
+}
+
+.menu-open--htx span::after {
+  transition-property: bottom, transform;
+}
+
+.menu-open--htx.is-active span {
+  background: none;
+}
+
+.menu-open--htx.is-active span {
+  background: none;
+}
+
+.menu-open--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-open--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-open--htx.is-active span::before,
+.menu-open--htx.is-active span::after {
+  transition-delay: 0s, $button-transition-duration;
+}

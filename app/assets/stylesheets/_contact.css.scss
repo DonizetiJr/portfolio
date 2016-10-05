@@ -27,6 +27,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
+  min-width: 250px;
   border: 1px solid $light;
   background: rgba(white, 0.4);
   font-size: 1.3em;
