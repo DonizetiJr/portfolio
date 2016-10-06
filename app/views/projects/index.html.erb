@@ -1,91 +1,55 @@
 <div id="posts" class="posts">
+  <div class="show-wrapper-home show-wrapper">
 
-  <div class="show-wrapper-home">
+    <button class="menu-open menu-open--htx">
+      <span>toggle menu</span>
+    </button>
 
-  <div class="show-wrapper">
-    <div id="o-wrapper" class="o-wrapper">
+    <header>
 
-      <button class="menu-open menu-open--htx">
-        <span>toggle menu</span>
-      </button>
-
-      <header>
-
-        <div class="project-header">
-
-          <div id="main_navigation" class="hide-menu">
-            <nav class="navbar">
-              <div class="links">
-                <li><%= link_to "Home", root_path, class: "navigation__link" %></li>
-                <li><%= link_to "Meus artigos", posts_path, class: "navigation__link" %></li>
-                <li><%= link_to "Meus projetos", projects_path, class: "navigation__link" %></li>
-                <li><%= link_to "Contato", new_contact_path, class: "navigation__link" %></li>
-                <% if user_signed_in? %>
-                  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out", class: "navigation__link" %></li>
-               <% end %>
-             </div>
-            </nav>
-          </div>
-
-          <script>
-
-          (function() {
-
-              "use strict";
-
-              var toggle = document.querySelector(".menu-open");
-              toggleHandler(toggle);
-
-              function toggleHandler(toggle) {
-                toggle.addEventListener( "click", function(e) {
-                  e.preventDefault();
-                  (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-                });
-              }
-
-            })();
-
-            if (document.documentElement.classList.contains('menu-ativo')) {
-              document.documentElement.classList.remove('menu-ativo');
-            }
-
-            document.querySelector('.menu-open').onclick = function() {
-              if (document.documentElement.classList.contains('menu-ativo')) {
-                document.documentElement.classList.remove('menu-ativo');
-              } else {
-                document.documentElement.classList.add('menu-ativo');
-              }
-            };
-
-          </script>
-
-          <h1 class="page_title">“The more that you read, the more things you
-            will know.” </h1>
-       </div>
-      </header>
-
-      <h1 class="page-category">Meus projetos</h1>
-      <div id="posts_wrapper" class="skinny_wrapper">
-        <% @projects.each do |project| %>
-          <div class="post">
-            <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
-            <h2><a href="article_show.html"><%= link_to project.title, project %></a></h2>
-            <hr>
-          </div>
-        <% end %>
-
-
-      <footer id="main_footer">
-        <div class="footer_links">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">GPlus</a>
-          <a href="#">Github</a>
+      <div class="project-header">
+        <div id="main_navigation" class="hide-menu">
+          <nav class="navbar">
+            <div class="links">
+              <li><%= link_to "Home", root_path, class: "navigation__link" %></li>
+              <li><%= link_to "Meus artigos", posts_path, class: "navigation__link" %></li>
+              <li><%= link_to "Meus projetos", projects_path, class: "navigation__link" %></li>
+              <li><%= link_to "Contato", new_contact_path, class: "navigation__link" %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out", class: "navigation__link" %></li>
+             <% end %>
+           </div>
+          </nav>
         </div>
-        <br>
 
-        <p class="copyright-articles">&copy;Donizeti Junior. All rights reserved. 2016</p>
-      </footer>
+        <h1 class="page_title">“The more that you read, the more things you
+            will know.” </h1>
+      </div>
+    </header>
+
+    <h1 class="page-category">Meus projetos</h1>
+    <div id="posts_wrapper" class="skinny_wrapper">
+      <% @projects.each do |project| %>
+        <div class="post">
+          <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
+          <h2><a href="article_show.html"><%= link_to project.title, project %></a></h2>
+          <hr>
+        </div>
+      <% end %>
     </div>
-  </div>
+
+
+    <footer id="main_footer">
+      <div class="footer_links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">GPlus</a>
+        <a href="#">Github</a>
+      </div>
+      <br>
+
+      <p class="copyright-articles">&copy;Donizeti Junior. All rights reserved. 2016</p>
+    </footer>
+
+    </div>
 </div>
