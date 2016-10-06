@@ -54,11 +54,6 @@ body.fade-out {
   padding: 4rem 0rem;
 }
 
-.o-wrapper {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-}
-
 /* - - - - - - - - - - - - - - Container - - - - - - - - - - - */
 
 .o-container {
@@ -139,22 +134,7 @@ body.fade-out {
   }
 }
 
-#page_title {
-  text-align: center;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
 
-#top {
-  font-size: 10px;
-}
-
-.project_button {
-  background: $highlight;
-  color: #fff;
-  text-decoration: none;
-  padding: 1em 2em;
-}
 
 .button_wrapper {
   margin: 4em 0 0 0;

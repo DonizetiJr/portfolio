@@ -94,6 +94,14 @@ $border: #e4e7ec;
     }
   }
 
+  .project_button {
+    background: $highlight;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+  }
+
+
 #share_box {
   text-align: center;
   p {
