@@ -1,23 +1,59 @@
 <div id="posts" class="posts">
-
   <div class="show-wrapper-home">
+    <div class="show-wrapper">
+      <div id="o-wrapper" class="o-wrapper">
 
-  <div class="show-wrapper">
-    <div id="o-wrapper" class="o-wrapper">
+        <button class="menu-open menu-open--htx">
+          <span>toggle menu</span>
+        </button>
 
       <div class="article-header">
 
         <div id="main_navigation">
-            <nav>
-              <%= link_to "Home", root_path, class: "navigation__link" %>
-              <%= link_to "Artigos", posts_path, class: "navigation__link" %>
-              <%= link_to "Projetos", projects_path, class: "navigation__link" %>
-              <%= link_to "Contato", new_contact_path, class: "navigation__link" %>
+          <nav class="navbar">
+            <div class="links">
+              <li><%= link_to "Home", root_path, class: "navigation__link" %></li>
+              <li><%= link_to "Meus artigos", posts_path, class: "navigation__link" %></li>
+              <li><%= link_to "Meus projetos", projects_path, class: "navigation__link" %></li>
+              <li><%= link_to "Contato", new_contact_path, class: "navigation__link" %></li>
               <% if user_signed_in? %>
-                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out" %>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out", class: "navigation__link" %></li>
              <% end %>
-            </nav>
+           </div>
+          </nav>
         </div>
+
+        <script>
+
+        (function() {
+
+            "use strict";
+
+            var toggle = document.querySelector(".menu-open");
+            toggleHandler(toggle);
+
+            function toggleHandler(toggle) {
+              toggle.addEventListener( "click", function(e) {
+                e.preventDefault();
+                (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+              });
+            }
+
+          })();
+
+          if (document.documentElement.classList.contains('menu-ativo')) {
+            document.documentElement.classList.remove('menu-ativo');
+          }
+
+          document.querySelector('.menu-open').onclick = function() {
+            if (document.documentElement.classList.contains('menu-ativo')) {
+              document.documentElement.classList.remove('menu-ativo');
+            } else {
+              document.documentElement.classList.add('menu-ativo');
+            }
+          };
+
+        </script>
 
         <h1 class="page_title">“The more that you read, the more things you
           will know.” </h1>
