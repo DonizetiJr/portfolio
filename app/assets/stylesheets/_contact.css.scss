@@ -66,6 +66,9 @@ input[type="submit"] {
     float: left;
     width: 90%;
   }
+  textarea {
+    min-height: 10em;
+  }
 
   input[type="submit"] {
     width: 90%;
