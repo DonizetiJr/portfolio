@@ -151,6 +151,12 @@ hr {
   margin: 1.2em;
 }
 
+@media (max-width: 600px) {
+   .show-wrapper-home, .show-wrapper {
+      margin: 0.6em;
+   }
+}
+
 .main_navigation {
   background-image: url(https://images.unsplash.com/photo-1474633677830-f3973595d573?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=3a535b9e16c0198c625a8fa0c82ee5f1);
   background-color: $highlight;

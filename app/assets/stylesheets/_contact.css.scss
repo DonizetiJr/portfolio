@@ -26,6 +26,12 @@ $border: #e4e7ec;
    }
 }
 
+@media (max-width: 600px) {
+   .show-wrapper-contact {
+      margin: .5em;
+   }
+}
+
 input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 1px solid $light;
   background: rgba(white, 0.4);

@@ -65,6 +65,8 @@ $button-transition-duration: 0.2s;     // The transition duration
     height: 100%;
     text-align: center;
     opacity: 0;
+    pointer-events: none;
+    cursor: default;
 
     transition: opacity .4s ease;
     .links {
@@ -84,6 +86,8 @@ $button-transition-duration: 0.2s;     // The transition duration
 
 .menu-ativo {
 	.navbar {
+      pointer-events: all;
+      cursor: pointer;
       zoom:1;
       filter: alpha(opacity=100);
       opacity: 1;
