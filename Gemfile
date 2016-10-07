@@ -12,6 +12,9 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+# Font-awesome icons
+gem 'font-awesome-sass', '~> 4.6.2'
+
 # Markdown & syntax highliting
 gem 'pygments.rb', '~> 0.6.3'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'

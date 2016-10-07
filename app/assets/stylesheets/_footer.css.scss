@@ -32,6 +32,9 @@ $border: #e4e7ec;
       border-bottom: 2px solid #fff;
     }
   }
+  .footer-icons {
+    display: none;
+   }
 
   .copyright, .copyright-articles {
     font-size: .9em;
@@ -60,13 +63,21 @@ $border: #e4e7ec;
     margin: 1em;
     padding: 0;
     .footer_links {
-      margin: 1em;
-      width: 30%;
+      display: none;
     }
-    .copyright {
+    .footer-icons {
+      display: inline;
+      letter-spacing: .5em;
+      margin-left: .5em;
+      font-size: 1.3em;
+      a {
+         color: rgb(170,148,131);
+      }
+   }
+    .copyright-articles {
+      margin-top: 1em;
       min-width: 50px;
-      font-size: .6em;
-      float: left;
+      font-size: .7em;
     }
   }
 }
