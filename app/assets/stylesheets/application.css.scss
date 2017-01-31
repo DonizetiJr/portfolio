@@ -94,8 +94,8 @@ body.fade-out {
 /* - - - -  - - - - - - - - - - First Header - - -  - - - -  - - - */
 
 .o-header {
-  background: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
-              url(https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=456716294dcad188cee6570aa12d2b65);
+  background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+                     asset-data-url("home-portfolio.jpg");
   height: 100vh;
   max-width: 100%;
   font-family: 'Raleway', sans-serif;

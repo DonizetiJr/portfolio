@@ -23,7 +23,7 @@
     </div>
 
     <h1 class="page-category">Meus artigos</h1>
-    <div id="posts_wrapper" class="skinny_wrapper">
+    <div class="posts_wrapper" class="skinny_wrapper">
       <% @posts.each do |post| %>
         <div class="post">
           <p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
