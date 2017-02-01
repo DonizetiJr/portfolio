@@ -5,10 +5,18 @@ $button-pad: 5px;                      // The left/right padding between button 
 $button-bar-space: 5px;                // The spacing between button bars
 $button-transition-duration: 0.2s;     // The transition duration
 
+$break-small: 620px;
+
 .menu-open, .menu-close {
-  position: absolute;
+  position: fixed;
   margin: 1.5em;
-  float: left;
+}
+
+@media (max-width: $break-small) {
+  .menu-open, .menu-close {
+    right: 0;
+    margin-right: 10px;
+  }
 }
 
 .navbar {
@@ -21,7 +29,7 @@ $button-transition-duration: 0.2s;     // The transition duration
 	height: 100%;
 	width: 90%;
 	max-width: 600px;
-	position: absolute;
+	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: -90%;
@@ -55,7 +63,7 @@ $button-transition-duration: 0.2s;     // The transition duration
   left: -90%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: $break-small) {
   .navbar {
     font-family: 'Stalemate', cursive;
     background: none;
