@@ -108,16 +108,77 @@ body.fade-out {
   align-items: center;
 }
 
+.svg-wrapper {
+  height: 60px;
+	margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 6px;
+  stroke: #d9baad;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 6px;
+    stroke: #ff0000;
+  }
+  16.6% {
+    stroke: #ff8000;
+  }
+  33.2% {
+    stroke: #ffff00;
+  }
+  50% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+    stroke: #008000;
+  }
+  66.4% {
+    stroke: #0000ff;
+  }
+  83% {
+    stroke: #a000c0;
+  }
+  100% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 6px;
+    stroke: #d40606;
+  }
+}
+
+.svg-wrapper .shape {
+  -webkit-animation: 3s draw linear infinite;
+  animation: 3s draw linear infinite;
+}
+
+
 #main_title, #subtitle {
   color: $background;
 }
 
 #main_title {
-  border: .8px solid;
-  font-size: 2.5em;
-  font-weight: 700;
-  letter-spacing: 4px;
-	padding: .1em 1.2em;
+  // border: .8px solid;
+  // font-size: 2.5em;
+  // font-weight: 700;
+  // letter-spacing: 4px;
+	// padding: .1em 1.2em;
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+  text-align: center;
 }
 
 #subtitle {
