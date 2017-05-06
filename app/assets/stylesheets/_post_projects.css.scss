@@ -1,11 +1,11 @@
 $background: #fcfaf7;
 $dark: rgb(12,12,12);
 $light: #b2b7bd;
-$highlight: #fc5158;
+$highlight: #fd999a;
 $border: #e4e7ec;
 
 .article-header {
-  background: linear-gradient(to left, #34e89e , #0f3443);
+  background: linear-gradient(to left, #e8c3fd , #86c5fc);
 }
 
 .project-header {
@@ -21,6 +21,7 @@ $border: #e4e7ec;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
 }
 
 @media screen and (min-width: 1000px) {
