@@ -101,7 +101,6 @@ body.fade-out {
   height: 100vh;
   max-width: 100%;
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
@@ -122,102 +121,12 @@ body.fade-out {
   }
 }
 
-.svg-wrapper {
-  height: 60px;
-	margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 320px;
-  @media screen and (max-width: $break-small) {
-    width: 200px;
-    float: none;
-  }
-}
-
-.shape {
-  fill: transparent;
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -474;
-  stroke-width: 6px;
-  stroke: #ff0000;
-}
-
-@keyframes draw {
-  0% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 6px;
-    stroke: #ff0000;
-  }
-  16.6% {
-    stroke: #ff8000;
-  }
-  33.2% {
-    stroke: #ffff00;
-  }
-  50% {
-    stroke-dasharray: 760;
-    stroke-dashoffset: 0;
-    stroke-width: 1px;
-    stroke: #008000;
-  }
-  66.4% {
-    stroke: #0000ff;
-  }
-  83% {
-    stroke: #a000c0;
-  }
-  100% {
-    stroke-dasharray: 140 540;
-    stroke-dashoffset: -474;
-    stroke-width: 6px;
-    stroke: #d40606;
-  }
-}
-
-@media screen and (max-width: $break-small) {
-  @keyframes draw {
-    0% {
-      stroke-dasharray: 40 540;
-      stroke-dashoffset: -274;
-      stroke-width: 6px;
-      stroke: #ff0000;
-    }
-    16.6% {
-      stroke: #ff8000;
-    }
-    33.2% {
-      stroke: #ffff00;
-    }
-    50% {
-      stroke-dasharray: 540;
-      stroke-dashoffset: 0;
-      stroke-width: 1px;
-      stroke: #008000;
-    }
-    66.4% {
-      stroke: #0000ff;
-    }
-    83% {
-      stroke: #a000c0;
-    }
-    100% {
-      stroke-dasharray: 40 540;
-      stroke-dashoffset: -274;
-      stroke-width: 6px;
-      stroke: #d40606;
-    }
-  }
-}
-
-.svg-wrapper .shape {
-  -webkit-animation: 3s draw linear infinite;
-  animation: 3s draw linear infinite;
-}
-
 #main_title {
+  font-weight: bold;
+  font-size: 8em;
+  font-family: 'Abril Fatface', cursive;
   color: $background;
-  font-size: 22px;
+  // font-size: 22px;
   letter-spacing: 8px;
   line-height: 32px;
   position: relative;
@@ -227,7 +136,7 @@ body.fade-out {
 
 @media all and (max-width: $break-small) {
   #main_title {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
 

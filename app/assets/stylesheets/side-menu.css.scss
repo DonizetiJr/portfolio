@@ -20,11 +20,11 @@ $break-small: 620px;
 }
 
 .navbar {
-  font-family: 'Abril Fatface', cursive;
   background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
               asset-data-url("menu-portfolio.jpg");
   -webkit-background-size: cover;
   background-size: cover;
+
 	margin: 0;
 	height: 100%;
 	width: 90%;
@@ -46,9 +46,11 @@ $break-small: 620px;
       color: #fff;
       text-decoration: none;
       margin: 0 1em;
-      font-size: 33.6px;
+      font-size: 37.6px;
+      font-weight: bold;
       &:hover {
         color: $highlight;
+        text-decoration: line-through;
         text-shadow: 5px 5px black;
       }
     }
