@@ -1,7 +1,8 @@
 $background: #fcfaf7;
-$dark: rgb(12,12,12);
+$dark: #777;
 $light: #b2b7bd;
-$highlight: #fd999a;
+// $highlight: #fd999a;
+$highlight: #c580bc;
 $border: #e4e7ec;
 
 .article-header {
@@ -53,7 +54,7 @@ $border: #e4e7ec;
         text-decoration: none;
         color: $dark;
         &:hover {
-          background: linear-gradient(to left, #34e89e , #0f3443);
+          background: linear-gradient(to left, #e8c3fd, #86c5fc);
           color: transparent;
           -webkit-background-clip: text;
           background-clip: text;
@@ -62,6 +63,7 @@ $border: #e4e7ec;
     }
     hr {
       margin: 3em auto;
+      border-color: #86c5fc;
     }
   }
   .project {
@@ -115,10 +117,24 @@ $border: #e4e7ec;
   }
 
   .project_button {
-    background: $highlight;
+    background-image: linear-gradient(to left, #fd999a,#f09d9d);
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 1em;
     color: #fff;
     text-decoration: none;
-    padding: 1em 2em;
+    padding: .8em 1.5em;
+    border-radius: 40px;
+    font-weight: bold;
+    box-shadow: 0 10px 15px 0 rgba(22, 46, 79, 0.1);
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+  &:hover {
+    border: none;
+    background-color: #fff;;
+    color: $dark;
+  }
   }
 
 

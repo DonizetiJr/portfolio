@@ -3,9 +3,10 @@
 @import "font-awesome";
 
 $background: #fcfaf7;
-$dark: rgb(0,0,0);
+$dark: #777;
 $light: #b2b7bd;
-$highlight: #fd999a;
+// $highlight: #fd999a;
+$highlight: #c580bc;
 $border: #e4e7ec;
 
 $break-small: 620px;
@@ -26,10 +27,11 @@ body {
 }
 
 body {
+  font-family: 'Raleway', sans-serif;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 1.8;
+  color: $dark;
 
   opacity: 1;
   transition: 3s opacity;
@@ -38,6 +40,13 @@ body {
 body.fade-out {
   opacity: 0;
   transition: none;
+}
+
+h1, h2, .navigation__link {
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* - - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - */
@@ -122,11 +131,10 @@ body.fade-out {
 }
 
 #main_title {
+  font-family: 'Dosis', sans-serif;
   font-weight: bold;
   font-size: 8em;
-  font-family: 'Abril Fatface', cursive;
   color: $background;
-  // font-size: 22px;
   letter-spacing: 8px;
   line-height: 32px;
   position: relative;

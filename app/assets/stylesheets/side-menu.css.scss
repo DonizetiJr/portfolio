@@ -14,29 +14,31 @@ $break-small: 620px;
 
 @media (max-width: $break-small) {
   .menu-open, .menu-close {
-    right: 0;
+    top: 0;
     margin-right: 10px;
   }
 }
 
 .navbar {
-  background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
-              asset-data-url("menu-portfolio.jpg");
+  // background-image: linear-gradient(#fd999a,#f09d9d);
+  // background-image: linear-gradient(-144deg, #a9b8cc, #c3c1dd, #c580bc, #9cbac6);
+  background-color: rgba(#c580bc, .9);
+
   -webkit-background-size: cover;
   background-size: cover;
 
 	margin: 0;
+  left: 0;
 	height: 100%;
-	width: 90%;
-	max-width: 600px;
+	width: 100%;
 	position: fixed;
 	z-index: 1;
-	top: 0;
-	left: -90%;
+	top: -100%;
 
-	transition: left 0.3s ease-out;
+	transition: top 0.2s ease-out;
   .links {
     text-align: center;
+    list-style: none;
     .navigation__link {
       width: 100%;
       position: relative;
@@ -49,7 +51,6 @@ $break-small: 620px;
       font-size: 37.6px;
       font-weight: bold;
       &:hover {
-        color: $highlight;
         text-decoration: line-through;
         text-shadow: 5px 5px black;
       }
@@ -62,14 +63,15 @@ $break-small: 620px;
 }
 
 .hide-menu {
-  left: -90%;
+  top: -100%;
 }
 
 @media (max-width: $break-small) {
   .navbar {
-    font-family: 'Stalemate', cursive;
     background: none;
-    background-color: #fff;
+    // background-color: #fff;
+    background-color: rgba(#c580bc, .9);
+
     left: 0;
     width: 100%;
     height: 100%;
@@ -83,10 +85,11 @@ $break-small: 620px;
       list-style: none;
       .navigation__link {
         top: 2em;
-        color: #000;
+        // color: #000;
+        color: #fff;
         text-transform: none;
         font-size: 1.4em;
-        font-weight: 200;
+        font-weight: bold;
       }
     }
   }
@@ -203,6 +206,6 @@ $break-small: 620px;
 @media (max-width: 600px) {
   .menu-open--htx.is-active span::before,
   .menu-open--htx.is-active span::after  {
-    background-color: #000;
+    background-color: #fff;
   }
 }
