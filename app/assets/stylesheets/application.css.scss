@@ -6,8 +6,13 @@ $background: #fcfaf7;
 $dark: #777;
 $light: #b2b7bd;
 // $highlight: #fd999a;
-$highlight: #c580bc;
+// $highlight: #c580bc;
 $border: #e4e7ec;
+
+$black: #090707;
+$new-background: #f1eff2;
+$yellow: #efdd88;
+$highlight: #a7ccd2;
 
 $break-small: 620px;
 
@@ -19,6 +24,7 @@ $break-small: 620px;
 
 html {
   box-sizing: border-box;
+  background-color: #a8cdd3;
 }
 
 html,
@@ -27,7 +33,7 @@ body {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Dosis', sans-serif;
   margin: 0;
   font-size: 14px;
   line-height: 1.8;
@@ -45,7 +51,7 @@ body.fade-out {
 h1, h2, .navigation__link {
   font-family: 'Dosis', sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;;
   letter-spacing: 1px;
 }
 
@@ -105,11 +111,11 @@ h1, h2, .navigation__link {
 /* - - - -  - - - - - - - - - - First Header - - -  - - - -  - - - */
 
 .o-header {
-  background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
-                     asset-data-url("home-portfolio.jpg");
+  // background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
+                    //  asset-data-url("home-portfolio.jpg");
   height: 100vh;
   max-width: 100%;
-  font-family: 'Raleway', sans-serif;
+  // font-family: 'Raleway', sans-serif;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
@@ -131,10 +137,11 @@ h1, h2, .navigation__link {
 }
 
 #main_title {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Satisfy', cursive;
   font-weight: bold;
   font-size: 8em;
-  color: $background;
+  color: $yellow;
+  text-transform: lowercase;
   letter-spacing: 8px;
   line-height: 32px;
   position: relative;

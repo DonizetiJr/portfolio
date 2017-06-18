@@ -5,6 +5,11 @@ $button-pad: 5px;                      // The left/right padding between button 
 $button-bar-space: 5px;                // The spacing between button bars
 $button-transition-duration: 0.2s;     // The transition duration
 
+$black: #090707;
+$new-background: #f1eff2;
+$yellow: #efdd88;
+$highlight: #a7ccd2;
+
 $break-small: 620px;
 
 .menu-open, .menu-close {
@@ -23,6 +28,7 @@ $break-small: 620px;
   // background-image: linear-gradient(#fd999a,#f09d9d);
   // background-image: linear-gradient(-144deg, #a9b8cc, #c3c1dd, #c580bc, #9cbac6);
   background-color: rgba(#c580bc, .9);
+  background-color: $highlight;
 
   -webkit-background-size: cover;
   background-size: cover;
@@ -70,7 +76,8 @@ $break-small: 620px;
   .navbar {
     background: none;
     // background-color: #fff;
-    background-color: rgba(#c580bc, .9);
+    // background-color: rgba(#c580bc, .9);
+    background-color: $highlight;
 
     left: 0;
     width: 100%;
@@ -87,9 +94,10 @@ $break-small: 620px;
         top: 2em;
         // color: #000;
         color: #fff;
-        text-transform: none;
+        // text-transform: none;
         font-size: 1.4em;
         font-weight: bold;
+        text-transform: lowercase;
       }
     }
     .posts-navbar__links .navigation__link {
@@ -146,7 +154,8 @@ $break-small: 620px;
   left: $button-pad;
   right: $button-pad;
   height: $bar-thickness;
-  background: rgb(255,255,255);
+  // background: rgb(255,255,255);
+  background: $yellow;
 }
 
 .menu-open span::before,
@@ -155,7 +164,8 @@ $break-small: 620px;
   display: block;
   width: 100%;
   height: $bar-thickness;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: $yellow;
   content: "";
 }
 
@@ -209,6 +219,7 @@ $break-small: 620px;
 @media (max-width: 600px) {
   .menu-open--htx.is-active span::before,
   .menu-open--htx.is-active span::after  {
-    background-color: #fff;
+    // background-color: #fff;
+    background-color: $yellow;
   }
 }

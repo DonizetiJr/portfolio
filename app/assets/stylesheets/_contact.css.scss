@@ -2,8 +2,13 @@ $background: #fcfaf7;
 $dark: #777;
 $light: #b2b7bd;
 // $highlight: #fd999a;
-$highlight: #c580bc;
+// $highlight: #c580bc;
 $border: #e4e7ec;
+
+$new-background: #f1eff2;
+$yellow: #efdd88;
+$brown: #8e7978;
+$highlight: #a7ccd2;
 
 .show-wrapper-contact {
   margin: 1.5em;
@@ -21,7 +26,7 @@ $border: #e4e7ec;
      font-family: 'Dosis', sans-serif;
      font-weight: 700;
      font-size: 1.3em;
-     color: $border;
+     color: $brown;
      vertical-align: middle;
    }
 }
@@ -30,12 +35,13 @@ $border: #e4e7ec;
   font-family: 'Dosis', sans-serif;
   font-weight: 700;
   font-size: 1.3em;
-  color: $border;
+  color: $brown;
+  text-transform: lowercase;
 }
 
 .contact-title {
-  text-transform: none;
-  color: $border;
+  text-transform:lowercase;
+  color: $brown;
 }
 
 @media (max-width: 600px) {
@@ -79,20 +85,27 @@ textarea {
 
 input[type="submit"] {
   float: left;
-    outline: none;
-    background: linear-gradient(to right, #c580bc, #be75b4);
-    border: none;
-    text-align: center;
-    font-size: .9em;
-    color: #fff;
-    text-decoration: none;
-    padding: .7em 1.2em;
-    border-radius: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 10px 15px 0 rgba(22, 46, 79, 0.1);
+  outline: none;
+  // background: linear-gradient(to right, #c580bc, #be75b4);
+  // border: none;
+  // border-radius: 40px;
+  // color: #fff;
 
-    transition: .4s all ease-in-out;
+  background-color: transparent;
+  border: 1px solid $brown;
+  border-radius: 0px;
+  color: $brown;
+  text-transform: lowercase;
+
+  text-align: center;
+  font-size: .9em;
+  text-decoration: none;
+  padding: .7em 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 15px 0 rgba(22, 46, 79, 0.1);
+
+  transition: .4s all ease-in-out;
   &:hover {
     border: none;
     background-color: #fff;
