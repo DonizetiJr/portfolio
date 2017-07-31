@@ -12,6 +12,7 @@ $border: #e4e7ec;
 $black: #090707;
 $new-background: #f1eff2;
 $yellow: #efdd88;
+$brown: #ffca28;
 $highlight: #a7ccd2;
 
 $break-small: 620px;
@@ -58,12 +59,15 @@ h1, h2, .navigation__link {
 /* - - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - */
 
 .wrapper {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+  @media screen and (max-width: 620px) {
+    width: 92%;
+  }
 }
 
 .skinny_wrapper {
-  width: 80%;
+  width: 75%;
   max-width: 760px;
   min-width: 220px;
   margin: 0 auto;
@@ -111,11 +115,8 @@ h1, h2, .navigation__link {
 /* - - - -  - - - - - - - - - - First Header - - -  - - - -  - - - */
 
 .o-header {
-  // background-image: linear-gradient(rgba(12,12,12, 0.4), rgba(12,12,12, 1)),
-                    //  asset-data-url("home-portfolio.jpg");
-  height: 100vh;
+  height: 75vh;
   max-width: 100%;
-  // font-family: 'Raleway', sans-serif;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
@@ -140,7 +141,7 @@ h1, h2, .navigation__link {
   font-family: 'Satisfy', cursive;
   font-weight: bold;
   font-size: 8em;
-  color: $yellow;
+  color: $brown;
   text-transform: lowercase;
   letter-spacing: 8px;
   line-height: 32px;

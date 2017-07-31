@@ -1,34 +1,18 @@
 $background: #fcfaf7;
 $dark: #777;
 $light: #b2b7bd;
-// $highlight: #fd999a;
-// $highlight: #c580bc;
 $border: #e4e7ec;
 
 $new-background: #f1eff2;
 $yellow: #efdd88;
-$brown: #8e7978;
+$brown: #ffca28;
 $highlight: #a7ccd2;
 
-.show-wrapper-contact {
-  margin: 1.5em;
-  min-height: 97vh;
-  text-align: center;
-  background-color: $border;
-   -webkit-background-size: cover;
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   h1, p {
-     color: $dark;
-   }
-   label {
-     font-family: 'Dosis', sans-serif;
-     font-weight: 700;
-     font-size: 1.3em;
-     color: $brown;
-     vertical-align: middle;
-   }
+.contact-wrapper {
+  margin-top: 10%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form {
@@ -44,16 +28,11 @@ $highlight: #a7ccd2;
   color: $brown;
 }
 
-@media (max-width: 600px) {
-   .show-wrapper-contact {
-      margin: .5em;
-   }
-}
-
 input[type="text"], input[type="email"], input[type="password"], textarea {
+  color: $dark;
   border: none;
   background: rgba(white, 0.4);
-  font-size: 1.3em;
+  font-size: 1.1em;
   width: 100%;
   height: 2em;
   padding: .5em;
@@ -86,11 +65,6 @@ textarea {
 input[type="submit"] {
   float: left;
   outline: none;
-  // background: linear-gradient(to right, #c580bc, #be75b4);
-  // border: none;
-  // border-radius: 40px;
-  // color: #fff;
-
   background-color: transparent;
   border: 1px solid $brown;
   border-radius: 0px;

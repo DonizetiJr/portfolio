@@ -29,8 +29,8 @@
 
     </div>
 
-    <div class="wrapper wrapper_padding clearfix">
-      <div class="col-1 about homepage_content">
+    <div id="about" class="wrapper wrapper_padding clearfix">
+      <div class="homepage_content">
         <h2>Sobre</h2>
         <hr>
         <p>Literally keffiyeh retro, cold-pressed single-origin coffee viral</p>
@@ -38,28 +38,40 @@
         umami dreamcatcher 3 <a href="#">Wolf moon</a> crucifix salvia.</p>
         <p> Taxidermy asymmetrical prism, polaroid craft beer. </p>
       </div>
+    </div>
 
-      <div class="col-2 homepage_content">
+    <div class="wrapper wrapper_padding clearfix">
+      <div class="homepage_content">
         <h2>Últimos textos</a></h2>
         <hr>
-        <% @posts.each do |post| %>
-          <h3><a href="#"><%= link_to post.title, post %></a></h3>
-          <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
-        <% end %>
+        <div class="site-columns">
+          <% @posts.each do |post| %>
+            <div class="col-1">
+              <h3><a href="#"><%= link_to post.title, post %></a></h3>
+              <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
+    </div>
 
-      <div class="col-3 homepage_content">
+    <div class="wrapper wrapper_padding clearfix">
+      <div class="homepage_content">
         <h2>Últimos Projetos</a></h2>
         <hr>
-        <% @projects.each do |project| %>
-          <h3><a href="#"><%= link_to project.title, project %></a></h3>
-          <p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
-        <% end %>
+        <div class="site-columns">
+          <% @projects.each do |project| %>
+            <div class="col-1">
+              <h3><a href="#"><%= link_to project.title, project %></a></h3>
+              <p class="date"><%= project.created_at.strftime("%A, %b, %d") %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
 
     </div>
 
-    <div class="wrapper wrapper_padding clearfix">
+    <div class="contact-wrapper wrapper wrapper_padding clearfix">
       <h2 class="page-category contact-title">Olá, como vai o seu dia?</h2>
       <hr class="contact-hr">
       <div class="skinny_wrapper wrapper_padding contact-form">

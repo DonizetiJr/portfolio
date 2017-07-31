@@ -7,7 +7,7 @@ $border: #e4e7ec;
 
 $new-background: #f1eff2;
 $yellow: #efdd88;
-$brown: #8e7978;
+$brown: #ffca28;
 $highlight: #a7ccd2;
 
 
@@ -81,18 +81,44 @@ hr {
   margin: 2rem 0;
 }
 
-
-.col-1, .col-2, .col-3 {
-  min-width: 220px;
-  float: left;
-
-  display: inline-block;
-  vertical-align: top;
+.site-columns {
+  @media screen and (min-width: 620px) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .col-1 {
-  width: 45%;
-  padding: 0 5% 0 2.5%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  margin: auto 3em;
+  min-height: 250px;
+  background-color: #ffca28;
+  padding: 0 7% 0 7%;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+
+  transition: .1s all ease-in-out; 
+  &:hover {
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12);
+  }
+  @media screen and (max-width: 620px) {
+    margin-bottom: 2em;
+  }
 }
 
 .col-2, .col-3 {
@@ -102,41 +128,53 @@ hr {
 
 .homepage_content {
   h2 {
-    color: #8e7978;
-    font-size: 1.1rem;
+    color: $dark;
+    font-size: 1.3rem;
     text-transform: lowercase;;
   }
   h3 {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 400;
     margin-bottom: .5em;
     a {
       text-decoration: none;
-      color: $brown;
+      cursor: pointer;
+      color: white;
       &:hover {
         color: $highlight;
       }
     }
   }
   .date {
-    font-size: .85em;
+    font-size: .95em;
     margin-bottom: 2em;
     color: $highlight;
   }
   p {
-    color: $brown;
+    color: $dark;
     font-weight: 700;
     margin: 0 0 0.75 0;
   }
 }
-.about {
+#about {
+  width: 50%;
   color: #fff;
   padding: 0 7.5% 0 0;
+  padding: 3em;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   a {
     color: $highlight;
     font-weight: 700;
     text-decoration: none;
+  }
+  hr {
+    width: 100%;
+  }
+  @media screen and (max-width: 620px) {
+    width: 90%;
   }
 }
 
@@ -146,8 +184,7 @@ hr {
 .show-wrapper-home {
   background-size: cover;
   margin: 1.2em;
-  // background-image: linear-gradient(rgba($new-background, 1) 25%, rgba($yellow, 1));
-  background-color: #f0edea;
+  background-color: #fdfdfd;
   border-radius: 10px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
