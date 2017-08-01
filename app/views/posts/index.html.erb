@@ -11,7 +11,6 @@
           <li><%= link_to "Home", root_path, class: "navigation__link" %></li>
           <li><%= link_to "Meus artigos", posts_path, class: "navigation__link" %></li>
           <li><%= link_to "Meus projetos", projects_path, class: "navigation__link" %></li>
-          <li><%= link_to "Contato", new_contact_path, class: "navigation__link" %></li>
           <% if user_signed_in? %>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out", class: "navigation__link" %></li>
          <% end %>

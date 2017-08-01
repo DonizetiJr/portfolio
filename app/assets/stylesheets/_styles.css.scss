@@ -77,7 +77,7 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  border-top: 2px solid $highlight;
+  border-top: 2px solid $brown;
   margin: 2rem 0;
 }
 
@@ -189,10 +189,6 @@ hr {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.posts {
-  background-color: #fff;
-}
-
 .show-wrapper {
   background-color: #fff;
   margin: 1.2em;
@@ -214,6 +210,7 @@ hr {
 }
 
 .page-category {
+  margin-top: 25vh;
   padding: 1em;
   margin: 1em;
   text-align: center;

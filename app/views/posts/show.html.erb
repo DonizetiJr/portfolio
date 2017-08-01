@@ -1,4 +1,22 @@
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+<div id="post_show_content" class="wrapper wrapper_padding">
+
+  <button class="menu-open menu-open--htx">
+      <span>toggle menu</span>
+    </button>
+
+    <div class="article-header">
+      <nav class="navbar">
+        <div class="links posts-navbar__links">
+          <li><%= link_to "Home", root_path, class: "navigation__link" %></li>
+          <li><%= link_to "Meus artigos", posts_path, class: "navigation__link" %></li>
+          <li><%= link_to "Meus projetos", projects_path, class: "navigation__link" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign-out", class: "navigation__link" %></li>
+         <% end %>
+        </div>
+      </nav>
+    </div>
+
   <header>
     <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
     <h1><%= @post.title %></h1>
