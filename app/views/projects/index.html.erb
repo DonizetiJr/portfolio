@@ -27,7 +27,7 @@
     <div class="posts_wrapper" class="skinny_wrapper">
       <% @projects.each do |project| %>
         <div class="post project">
-          <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
+          <p class="date"><%= project.created_at.strftime('Escrito em %d/%m/%Y') %></p>
           <h2><a href="article_show.html"><%= link_to project.title, project %></a></h2>
           <hr>
         </div>
@@ -43,10 +43,8 @@
         <a href="#">Github</a>
       </div>
       <div class="footer-icons">
-         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-         <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-         <a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/donizeti.junior.92" target="_blank">Facebook</a>
+        <a href="https://github.com/DonizetiJr" target="_blank">Github</a>
       </div>
       <br>
 
